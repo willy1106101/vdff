@@ -17,7 +17,6 @@ client.on('message', (msg,reaction, user) => {
   }
   if (msg.content === '!web') {
     msg.reply('我的網站連結: https://willyhsu.rf.gd/');
-    msg.seturl('https://willyhsu.rf.gd/')
   }
   if (msg.content === '!blink') {
     msg.reply('機器邀請連結: https://discord.com/api/oauth2/authorize?client_id=904281957289054218&permissions=8&scope=bot');
@@ -28,13 +27,13 @@ client.on('message', (msg,reaction, user) => {
   }*/
 });
 
-client.on('guildMemberAdd', (member) => {
+/*client.on('guildMemberAdd', (member) => {
     const channelId = 'CHANNEL_ID'; // The Channel ID you just copied
     const welcomeMessage = `Hey <@${member.id}>! Welcome to my server!`;
     member.guild.channels.fetch(channelId).then(channel => {
         channel.send(welcomeMessage)
     });
-});
+});*/
 
 /*client.on('messageReactionAdd', (reaction, user) => {
  const member = reaction.message.guild.members.cache.get(user.id);   
