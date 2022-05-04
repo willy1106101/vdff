@@ -8,7 +8,8 @@ client.on('ready', () => {
   console.log(`Logged in as ${client.user.tag}!`);
 });
 
-client.on('message', (msg,user) => {
+client.on('message', (add,msg,user) => {
+  const ass = add.message.guild.members.cache.get(user.id);
   if (msg.content === 'ping') {
     msg.reply('Pong!');
   }
@@ -21,12 +22,10 @@ client.on('message', (msg,user) => {
   if (msg.content === 'blink') {
     msg.reply('機器邀請連結: https://discord.com/api/oauth2/authorize?client_id=904281957289054218&permissions=8&scope=bot');
   }
-  if (msg.content === 'radd') {
-    const aa=msg.message.guild.members.cache.get(user.id); 
+  if (ass.content === 'radd') {
     msg.reply('身分組加入中...')
-    aa.roles.add('971242040992071690')
-    aa.reply('加入成功')
-    
+    ass.roles.add('971242040992071690')
+    msg.reply('加入成功')
   }
 });
 
@@ -43,9 +42,5 @@ client.on('messageReactionAdd', (reaction, user) => {
                 
                 break;
         }
-});
-client.on('messageAdd', (vv, user) => {
- const aa = vv.message.guild.members.cache.get(user.id);   
- 
 });
 client.login(token);
