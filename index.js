@@ -7,6 +7,7 @@ const { token } = require('./config.json');
 client.on('ready', () => {
   console.log(`Logged in as ${client.user.tag}!`);
 });
+
 client.on('message', msg => {
   if (msg.content === 'ping') {
     msg.reply('Pong!');
@@ -26,14 +27,18 @@ client.on('message', msg => {
 
 client.on('messageReactionAdd', (reaction, user) => {
  const member = reaction.message.guild.members.cache.get(user.id);   
+  if (reaction.message.id === '971251266187583578') {
  switch (reaction.emoji.name) {
             case '🎨':
-                member.roles.add('')
+                member.roles.add('971242040992071690')
+              
                 break;
             case '💫':
-                member.roles.add('<貼上身分組 ID>')
+                member.roles.add('971242040992071690')
+                
                 break;
         }
+  }
 });
 
 client.login(token);
