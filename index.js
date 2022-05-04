@@ -8,7 +8,7 @@ client.on('ready', () => {
   console.log(`Logged in as ${client.user.tag}!`);
 });
 
-client.on('message', msg => {
+client.on('message', (msg,user) => {
   if (msg.content === 'ping') {
     msg.reply('Pong!');
   }
@@ -21,13 +21,18 @@ client.on('message', msg => {
   if (msg.content === 'blink') {
     msg.reply('機器邀請連結: https://discord.com/api/oauth2/authorize?client_id=904281957289054218&permissions=8&scope=bot');
   }
-  
+  if (msg.content === 'radd') {
+    const aa=msg.message.guild.members.cache.get(user.id); 
+    msg.reply('身分組加入中...')
+    aa.roles.add('971242040992071690')
+    aa.reply('加入成功')
+    
+  }
 });
 
 
 client.on('messageReactionAdd', (reaction, user) => {
  const member = reaction.message.guild.members.cache.get(user.id);   
-  if (reaction.message.id === '971251266187583578') {
  switch (reaction.emoji.name) {
             case '🎨':
                 member.roles.add('971242040992071690')
@@ -38,7 +43,9 @@ client.on('messageReactionAdd', (reaction, user) => {
                 
                 break;
         }
-  }
 });
-
+client.on('messageAdd', (vv, user) => {
+ const aa = vv.message.guild.members.cache.get(user.id);   
+ 
+});
 client.login(token);
