@@ -20,9 +20,6 @@ client.on('message', msg => {
   if (msg.content === 'blink') {
     msg.reply('機器邀請連結: https://discord.com/api/oauth2/authorize?client_id=904281957289054218&permissions=8&scope=bot');
   }
-  if (msg.content === 'blink') {
-    msg.reply('');
-  }
   
 });
 client.on('messageReactionAdd', (reaction, user) => {
@@ -30,9 +27,6 @@ client.on('messageReactionAdd', (reaction, user) => {
  switch (reaction.emoji.name) {
             case '🎨':
                 member.roles.add('971242040992071690')
-                break;
-            case 'hi':
-                member.roles.add('')
                 break;
         }
 });
