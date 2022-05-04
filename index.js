@@ -22,11 +22,16 @@ client.on('message', msg => {
   }
   
 });
+
+
 client.on('messageReactionAdd', (reaction, user) => {
  const member = reaction.message.guild.members.cache.get(user.id);   
  switch (reaction.emoji.name) {
             case '🎨':
-                member.roles.add('971242040992071690')
+                member.roles.add('')
+                break;
+            case '💫':
+                member.roles.add('<貼上身分組 ID>')
                 break;
         }
 });
