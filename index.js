@@ -21,6 +21,10 @@ client.on('message', (msg,reaction, user) => {
   if (msg.content === '!blink') {
     msg.reply('機器邀請連結: https://discord.com/api/oauth2/authorize?client_id=904281957289054218&permissions=8&scope=bot');
   }
+  if (msg.content === '!invite') {
+    msg.reply('本伺服器連結https://discord.gg/8cV7RubA7Y');
+  }
+
   /*const member = reaction.message.guild.members.cache.get(user.id); 
    if (reaction.content === 'ad') {
     member.roles.add('971242040992071690')
