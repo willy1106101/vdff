@@ -10,7 +10,7 @@ client.on('ready', () => {
 
 client.on('message', (msg,reaction, user) => {
   if (msg.content === '!ping') {
-    msg.reply('Pong!');
+    msg.reply('webbot Pong!');
   }
   if (msg.content === '!hi') {
     msg.reply('Hi!');
