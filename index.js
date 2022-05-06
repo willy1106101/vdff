@@ -34,6 +34,10 @@ client.on('message', (msg,reaction,user,quotes) => {
     msg.channel.send('@everyone新檔案已上傳至網站了！')
     //msg.channel.setURL('https://discord.gg/8cV7RubA7Y')
   }
+  if (msg.content === '!call') {
+    msg.channel.send('@管理員')
+    //msg.channel.setURL('https://discord.gg/8cV7RubA7Y')
+  }
   
 });
 
