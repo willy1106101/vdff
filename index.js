@@ -1,6 +1,7 @@
 console.log(`Starting Bot...`);
 
 const Discord = require('discord.js');
+const {MessageEmbed} = require('discord.js');
 const client = new Discord.Client();
 const { token } = require('./config.json');
 
@@ -8,7 +9,7 @@ client.on('ready', () => {
   console.log(`Logged in as ${client.user.tag}!`);
 });
 
-client.on('message', (msg,reaction, user) => {
+client.on('message', (msg,reaction,user) => {
   if (msg.content === '!ping') {
     msg.channel.send('webbot Pong!');
   }
@@ -24,7 +25,15 @@ client.on('message', (msg,reaction, user) => {
   if (msg.content === '!invite') {
     msg.channel.send('本伺服器連結https://discord.gg/8cV7RubA7Y')
     //msg.channel.setURL('https://discord.gg/8cV7RubA7Y')
-    const embed = new MessageEmbed() .setColor('RANDOM') .setTitle("User Information") .addField("Player Name", message.author.username, true) .addField("Current Server", message.guild.name,) .setThumbnail(message.author.displayAvatarURL()) .setFooter("Version " + version) message.channel.send(embed);
+    const embed = new MessageEmbed() 
+    .setColor('RANDOM')
+    .setTitle("User Information")
+    .setURL('https://discord.gg/8cV7RubA7Y')
+    //.addField("Player Name", message.author.username, true)
+    //.addField("Current Server", message.guild.name,) 
+    //.setThumbnail(message.author.displayAvatarURL()) 
+    //.setFooter() 
+    msg.channel.send(embed);
   }
   
 });
