@@ -22,9 +22,9 @@ client.on('message', (msg,reaction, user) => {
     msg.channel.send('機器邀請連結: https://discord.com/api/oauth2/authorize?client_id=904281957289054218&permissions=8&scope=bot');
   }
   if (msg.content === '!invite') {
-    //msg.channel.send('本伺服器連結https://discord.gg/8cV7RubA7Y');
-    title:'伺服器邀請連結！'
-    url:'https://discord.gg/8cV7RubA7Y'
+    msg.channel.send('本伺服器連結https://discord.gg/8cV7RubA7Y')
+    //msg.channel.setURL('https://discord.gg/8cV7RubA7Y')
+    const embed = new MessageEmbed() .setColor('RANDOM') .setTitle("User Information") .addField("Player Name", message.author.username, true) .addField("Current Server", message.guild.name,) .setThumbnail(message.author.displayAvatarURL()) .setFooter("Version " + version) message.channel.send(embed);
   }
   
 });
