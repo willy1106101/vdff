@@ -10,25 +10,22 @@ client.on('ready', () => {
 
 client.on('message', (msg,reaction, user) => {
   if (msg.content === '!ping') {
-    msg.reply('webbot Pong!');
+    msg.channel.send('webbot Pong!');
   }
   if (msg.content === '!hi') {
-    msg.reply('Hi!');
+    msg.channel.send('Hi!');
   }
   if (msg.content === '!web') {
-    msg.reply('我的網站連結: https://willyhsu.rf.gd/');
+    msg.channel.send('我的網站連結: https://willyhsu.rf.gd/');
   }
   if (msg.content === '!blink') {
-    msg.reply('機器邀請連結: https://discord.com/api/oauth2/authorize?client_id=904281957289054218&permissions=8&scope=bot');
+    msg.channel.send('機器邀請連結: https://discord.com/api/oauth2/authorize?client_id=904281957289054218&permissions=8&scope=bot');
   }
   if (msg.content === '!invite') {
-    msg.reply('本伺服器連結https://discord.gg/8cV7RubA7Y');
+    msg.channel.send('本伺服器連結https://discord.gg/8cV7RubA7Y');
+    url:''
   }
-
-  /*const member = reaction.message.guild.members.cache.get(user.id); 
-   if (reaction.content === 'ad') {
-    member.roles.add('971242040992071690')
-  }*/
+  
 });
 
 /*client.on('guildMemberAdd', (member) => {
