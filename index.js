@@ -22,8 +22,9 @@ client.on('message', (msg,reaction, user) => {
     msg.channel.send('機器邀請連結: https://discord.com/api/oauth2/authorize?client_id=904281957289054218&permissions=8&scope=bot');
   }
   if (msg.content === '!invite') {
-    msg.channel.send('本伺服器連結https://discord.gg/8cV7RubA7Y');
-    url:''
+    //msg.channel.send('本伺服器連結https://discord.gg/8cV7RubA7Y');
+    title:'伺服器邀請連結！'
+    url:'https://discord.gg/8cV7RubA7Y'
   }
   
 });
