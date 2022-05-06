@@ -26,6 +26,14 @@ client.on('message', (msg,reaction,user,quotes) => {
     msg.channel.send('本伺服器連結https://discord.gg/8cV7RubA7Y')
     //msg.channel.setURL('https://discord.gg/8cV7RubA7Y')
   }
+  if (msg.content === '!upload') {
+    msg.channel.send('網站已更新！網址：https://willyhsu.rf.gd/')
+    //msg.channel.setURL('https://discord.gg/8cV7RubA7Y')
+  }
+  if (msg.content === '!fupload') {
+    msg.channel.send('@everyone新檔案已上傳至網站了！')
+    //msg.channel.setURL('https://discord.gg/8cV7RubA7Y')
+  }
   
 });
 
