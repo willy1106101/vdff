@@ -27,16 +27,25 @@ client.on('message', (msg,reaction,user,quotes) => {
     //msg.channel.setURL('https://discord.gg/8cV7RubA7Y')
   }
   if (msg.content === '!upload') {
-    msg.channel.send('網站已更新！網址：https://willyhsu.rf.gd/')
+    //msg.channel.send('網站已更新！網址：https://willyhsu.rf.gd/')
     //msg.channel.setURL('https://discord.gg/8cV7RubA7Y')
+    const channelId = '971231107179769899';
+    client.channels.fetch(channelId).then(channel => {
+    channel.send("My Message"); });
   }
   if (msg.content === '!fupload') {
-    msg.channel.send('@everyone新檔案已上傳至網站了！')
+    //msg.channel.send('@everyone新檔案已上傳至網站了！')
     //msg.channel.setURL('https://discord.gg/8cV7RubA7Y')
+    const channelId = '971231107179769899';
+    client.channels.fetch(channelId).then(channel => {
+    channel.send("My Message"); });
   }
   if (msg.content === '!call') {
-    msg.channel.send('@管理員')
+    //msg.channel.send('@管理員')
     //msg.channel.setURL('https://discord.gg/8cV7RubA7Y')
+    const channelId = '971231107179769899';
+    client.channels.fetch(channelId).then(channel => {
+    channel.send("My Message"); });
   }
   
 });
