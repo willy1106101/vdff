@@ -44,18 +44,18 @@ client.on('message', (msg,reaction,user,quotes ,message) => {
   if (msg.content === '!call') {
     //msg.channel.send('@管理員')
     //msg.channel.setURL('https://discord.gg/8cV7RubA7Y')
-    /*const channelId = '971756261328683108';
-    client.channels.fetch(channelId).then(channel => {
+   /* const channelId = '971756261328683108';
+   client.channels.fetch(channelId).then(channel => {
     channel.send("測試！"); 
     });
-    msg.channel.send('成功發送！')*/
-// Create an invite and send it in the channel
+    msg.channel.send('成功發送！')
+    // Create an invite and send it in the channel
 // You can only create an invite from a GuildChannel
 // Messages can only be sent to a TextChannel
-    const id =
-    msg.channels.fetch('971231107179769899').createInvite().then(invite =>
-    msg.channel.send(invite.url)
-);
+ msg.createInvite()
+  message.channels.fetch(channelId).then(invite =>
+    message.channel.send(invite.url)
+);*/
   }
   
 });
