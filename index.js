@@ -8,7 +8,7 @@ client.on('ready', () => {
   console.log(`Logged in as ${client.user.tag}!`);
 });
 
-client.on('message', (msg,reaction,user,quotes) => {
+client.on('message', (msg,reaction,user,quotes ,message) => {
   if (msg.content === '!ping') {
     msg.channel.send('webbot Pong!');
   }
@@ -22,7 +22,7 @@ client.on('message', (msg,reaction,user,quotes) => {
     msg.channel.send('機器邀請連結: https://discord.com/api/oauth2/authorize?client_id=904281957289054218&permissions=8&scope=bot');
   }
   if (msg.content === '!invite') {
-    msg.channel.send('本伺服器連結https://discord.gg/8cV7RubA7Y')
+    msg.channel.send('本伺服器連結https://discord.gg/eRdMgVhPBq')
     //msg.channel.setURL('https://discord.gg/8cV7RubA7Y')
   }
   if (msg.content === '!upload') {
@@ -49,21 +49,16 @@ client.on('message', (msg,reaction,user,quotes) => {
     channel.send("測試！"); 
     });
     msg.channel.send('成功發送！')*/
-
+// Create an invite and send it in the channel
+// You can only create an invite from a GuildChannel
+// Messages can only be sent to a TextChannel
+    const id =
+    msg.channels.fetch('971231107179769899').createInvite().then(invite =>
+    msg.channel.send(invite.url)
+);
   }
   
 });
-client.on("message", (msg) => { 
-  var message = new Discord.MessageEmbed() 
-  .setDescription("Pong")  
-  .setColor("#fff") 
-  .setAuthor("Random Person") 
-  .setTitle("This is an embed") 
-  msg.channel.send(message)
-  // without mention 
-  msg.reply(message)
-  // with mention 
-})
 /*client.on('guildMemberAdd', (member) => {
     const channelId = 'CHANNEL_ID'; // The Channel ID you just copied
     const welcomeMessage = `Hey <@${member.id}>! Welcome to my server!`;
