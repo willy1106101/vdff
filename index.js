@@ -30,7 +30,7 @@ client.on('message', (msg,reaction,user,quotes ,message) => {
     //msg.channel.setURL('https://discord.gg/8cV7RubA7Y')
     const channelId = '971756261328683108';
     client.channels.fetch(channelId).then(channel => {
-    channel.send("網站已更新！～"); });
+    channel.send("@here網站已更新！～"); });
     msg.channel.send('成功發送！')
   }
   if (msg.content === '!fupload') {
@@ -38,11 +38,27 @@ client.on('message', (msg,reaction,user,quotes ,message) => {
     //msg.channel.setURL('https://discord.gg/8cV7RubA7Y')
     const channelId = '971756261328683108';
     client.channels.fetch(channelId).then(channel => {
-    channel.send("新的檔案已上傳至網站嘍！～"); });
+    channel.send("@here新的檔案已上傳至網站嘍！～"); });
+    msg.channel.send('成功發送！')
+  }
+  if (msg.content === '!fupload') {
+    //msg.channel.send('')
+    //msg.channel.setURL('https://discord.gg/8cV7RubA7Y')
+    const channelId = '971756261328683108';
+    client.channels.fetch(channelId).then(channel => {
+    channel.send("@here網站目前禁止登入！～"); });
+    msg.channel.send('成功發送！')
+  }
+  if (msg.content === '!logopen') {
+    //msg.channel.send('')
+    //msg.channel.setURL('https://discord.gg/8cV7RubA7Y')
+    const channelId = '971756261328683108';
+    client.channels.fetch(channelId).then(channel => {
+    channel.send("@here網站目前開放登入！～"); });
     msg.channel.send('成功發送！')
   }
   if (msg.content === '!call') {
-    //msg.channel.send('@管理員')
+    //msg.channel.send('@here')
     //msg.channel.setURL('https://discord.gg/8cV7RubA7Y')
    /* const channelId = '971756261328683108';
    client.channels.fetch(channelId).then(channel => {
@@ -80,4 +96,5 @@ client.on('message', (msg,reaction,user,quotes ,message) => {
                 break;
         }
 });*/
+
 client.login(token);
