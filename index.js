@@ -45,11 +45,12 @@ client.on('message', (msg,reaction,user,quotes) => {
   if (msg.content === '!call') {
     //msg.channel.send('@管理員')
     //msg.channel.setURL('https://discord.gg/8cV7RubA7Y')
-    const channelId = '971756261328683108';
+    /*const channelId = '971756261328683108';
     client.channels.fetch(channelId).then(channel => {
     channel.send("測試！"); 
     });
-    msg.channel.send('成功發送！')
+    msg.channel.send('成功發送！')*/
+
   }
   
 });
