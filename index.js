@@ -1,5 +1,4 @@
 console.log(`Starting Bot...`);
-
 const Discord = require('discord.js');
 const {MessageEmbed} = require('discord.js');
 const client = new Discord.Client();
@@ -54,7 +53,17 @@ client.on('message', (msg,reaction,user,quotes) => {
   }
   
 });
-
+client.on("message", (msg) => { 
+  var message = new Discord.MessageEmbed() 
+  .setDescription("Pong")  
+  .setColor("#fff") 
+  .setAuthor("Random Person") 
+  .setTitle("This is an embed") 
+  msg.channel.send(message)
+  // without mention 
+  msg.reply(message)
+  // with mention 
+})
 /*client.on('guildMemberAdd', (member) => {
     const channelId = 'CHANNEL_ID'; // The Channel ID you just copied
     const welcomeMessage = `Hey <@${member.id}>! Welcome to my server!`;
