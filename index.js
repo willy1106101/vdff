@@ -41,7 +41,7 @@ client.on('message', (msg,reaction,user,quotes ,message) => {
     channel.send("@here新的檔案已上傳至網站嘍！～"); });
     msg.channel.send('成功發送！')
   }
-  if (msg.content === '!fupload') {
+  if (msg.content === '!logstop') {
     //msg.channel.send('')
     //msg.channel.setURL('https://discord.gg/8cV7RubA7Y')
     const channelId = '971756261328683108';
