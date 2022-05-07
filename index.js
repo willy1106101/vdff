@@ -59,6 +59,27 @@ client.on('message', (msg,reaction,user,quotes ,message) => {
   }
   
 });
+const user = message.mentions.users.first();
+
+if (!/^\d+$/.test(message.content.split(" ")[1])) 
+  return message.reply('Please provide a valid number');
+// Check if the provided argument is completely a number. We run this because parseInt can parse numbers like this 564gb, leading to some undesirable results
+
+// Parse Amount
+const amount = !!parseInt(message.content.split(" ")[1]) ? parseInt(message.content.split(" ")[1]) : parseInt(message.content.split(" ")[2])
+
+if (!amount) return message.reply("Must specify an amount to delete!");
+if (!amount && !user) return message.reply("Must specify a user and amount, or just an amount, of messages to purge!");
+// Fetch 100 messages (will be filtered and lowered up to max amount requested)
+message.channel.messages.fetch({
+ limit: 100,
+}).then((messages) => {
+ if (user) {
+ const filterBy = user ? user.id : Client.user.id;
+ messages = messages.filter(m => m.author.id === filterBy).array().slice(0, amount);
+ }
+ message.channel.bulkDelete(messages).catch(error => console.log(error.stack));
+});
 /*client.on('guildMemberAdd', (member) => {
     const channelId = 'CHANNEL_ID'; // The Channel ID you just copied
     const welcomeMessage = `Hey <@${member.id}>! Welcome to my server!`;
