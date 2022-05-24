@@ -92,7 +92,7 @@ client.on('message',  (msg,bmsg) => {
    // var user = pass
  // msg.reply('你的帳號為:'+ user +'你的密碼為:'+ pass)
     msg.delete()
-    var aa='帳號為que123'+'密碼為que112233'
+    var aa='帳號為que123'+'密碼為que1234567890'
     msg.channel.send(aa).then(msg => msg.delete({timeout: 10000}));   
   }
   /*if (msg.content === `${prefix}a`) {
