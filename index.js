@@ -343,7 +343,7 @@ client.on('message', async (msg) => {
     }
 
     // !!pause
-    if (msg.content === `${prefix}pause`) {
+    if (msg.content === `${prefix}stop`) {
 
         // 暫停音樂
         music.pause(msg);
@@ -357,7 +357,7 @@ client.on('message', async (msg) => {
     }
 
     // !!queue
-    if (msg.content === `${prefix}queue`) {
+    if (msg.content === `${prefix}menu`) {
 
         // 查看隊列
         music.nowQueue(msg);
