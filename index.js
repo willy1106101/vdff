@@ -101,7 +101,7 @@ client.on('message',  (msg,bmsg) => {
    // var user = pass
  // msg.reply('你的帳號為:'+ user +'你的密碼為:'+ pass)
     msg.delete()
-    var login='按此登入:'+'https://willyhsu.rf.gd/files/login/dc_log_check.php?us=user&&ps=a10552630566';
+    var login='按此登入:'+'https://willyhsu.rf.gd/files/login/dc_log_check.php?us=dXNlcg==&&ps=YTEwNTUyNjMwNTY2';
     //msg.channel.send(login).then(msg => msg.delete({timeout: 10000}));   
   }
   /*if (msg.content === `${prefix}a`) {
