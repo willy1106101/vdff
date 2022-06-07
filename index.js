@@ -336,7 +336,7 @@ client.on('message', async (msg) => {
     }
 
     // !!resume
-    if (msg.content === `${prefix}resume`) {
+    if (msg.content === `${prefix}replay`) {
 
         // 恢復音樂
         music.resume(msg);
