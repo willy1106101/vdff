@@ -93,8 +93,16 @@ client.on('message',  (msg,bmsg) => {
    // var user = pass
  // msg.reply('你的帳號為:'+ user +'你的密碼為:'+ pass)
     msg.delete()
-    var aa='帳號為que123'+'密碼為que1234567890'
-    msg.channel.send(aa).then(msg => msg.delete({timeout: 10000}));   
+    var aa='帳號為que123'+'密碼為que1234567890';
+    //msg.channel.send(aa).then(msg => msg.delete({timeout: 10000}));   
+  }
+  if (msg.content=== `${prefix}loguser`) {
+  //  var pass= [msg.member.id / (msg.member.id * 1234) ]*500
+   // var user = pass
+ // msg.reply('你的帳號為:'+ user +'你的密碼為:'+ pass)
+    msg.delete()
+    var login='按此登入:'+'';
+    //msg.channel.send(login).then(msg => msg.delete({timeout: 10000}));   
   }
   /*if (msg.content === `${prefix}a`) {
     var pass= [(msg.member.id / msg.member.id) * 1234]*500
